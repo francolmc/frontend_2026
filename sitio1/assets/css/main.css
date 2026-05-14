@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    background-color: cyan;
+    font-family: "Roboto", sans-serif;
+}
+
+a {
+    color: red;
+    text-decoration: none;
+    padding-right: 30px;
+    padding-left: 30px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+input[type="email"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#email_user {
+    background-color: red;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
