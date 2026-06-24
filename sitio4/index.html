@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de personas</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-row">
+            <label for="nombre">Nombre: </label>
+            <input type="text" name="nombre" id="nombre">
+        </div>
+
+        <div class="form-row">
+            <label for="apellido">Apellido: </label>
+            <input type="text" name="apellido" id="apellido">
+        </div>
+
+        <div class="form-row">
+            <label for="email">Email: </label>
+            <input type="email" name="email" id="email">
+            <button class="btn btn-guardar" id="guardar">Guardar</button>
+        </div>
+
+        <table id="tabla">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Email</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="tabla-body">
+
+            </tbody>
+        </table>
+    </div>
+    <script src="./assets/js/main.js"></script>
+</body>
+</html>

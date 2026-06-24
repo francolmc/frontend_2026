@@ -1,0 +1,111 @@
+/*
+Variables y Resets
+*/
+
+:root {
+    --color-primario: #0a2540;
+    --color-acento: #00b4d8;
+    --color-acento-claro: #90e0ef;
+    --color-texto: #1a1a2e;
+    --color-texto-claro: #555e7a;
+    --color-fondo: #f8fafd;
+    --color-blanco: #ffffff;
+    --color-tarjeta: #ffffff;
+    --color-borde: #e0e7ef;
+    --sombra: 0 4px 24px rgba(0, 0, 0, 0.08);
+    --sombra-hover: 0 8px 36px rgba(0, 180, 216, 0.18);
+    --radio: 12px;
+    --fuente-titulos: 'Georgia', serif;
+    --fuente-cuerpo: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --transicion: all 0.25s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--fuente-cuerpo);
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    line-height: 1.7;
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--fuente-titulos);
+    color: var(--color-primario);
+    line-height: 1.25;
+}
+
+h1 {
+    font-size: 2.8rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.4rem;
+}
+
+h4 {
+    font-size: 1.1rem;
+}
+
+p {
+    color: var(--color-texto-claro);
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-acento);
+    transition: var(--transicion);
+}
+
+a:hover {
+    color: var(--color-primario);
+}
+
+.contenedor {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.logo {
+    color: var(--color-blanco);
+    font-family: var(--fuente-titulos);
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: #ccd6f6;
+    font-size: 0.95rem;
+    font-weight: 500px;
+    padding: 6px 0;
+    border-bottom: 2px solid transparent;
+    transition: var(--transicion);
+}
+
+header {
+    background-color: var(--color-primario);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.18);
+}
