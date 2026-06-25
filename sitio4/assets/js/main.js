@@ -1,4 +1,5 @@
 let personas = [];
+let indexEdit = -1;
 
 class Persona {
     nombre = "";
@@ -45,6 +46,48 @@ function limpiarCampos() {
     document.getElementById("email").value = '';
 }
 
+function editar(index) {
+    indexEdit = index;
+    const persona = personas[index];
+
+    limpiarCampos();
+
+    document.getElementById('nombre').value = persona.nombre;
+    document.getElementById('apellido').value = persona.apellido;
+    document.getElementById('email').value = persona.email;
+}
+
+function modificar(index) {
+    const nombre = document.getElementById("nombre").value;
+    const apelido = document.getElementById("apellido").value;
+    const email = document.getElementById("email").value;
+
+    personas[index].nombre = nombre;
+    personas[index].apelido = apelido;
+    personas[index].email = email;
+
+    limpiarCampos();
+    renderTable();
+    indexEdit = -1;
+}
+
+function guardar() {
+    if (indexEdit === -1) {
+        crear();
+    } else if (indexEdit !== -1) {
+        modificar(indexEdit);
+    }    
+}
+
+function eliminar(index) {
+    const persona = personas[index];
+    if(confirm(`Esta apunto de eliminar a '${persona.email}', esta seguro?`)) {
+        personas.splice(index, 1);
+        renderTable();
+        alert('La persona fue eliminada 🫣');
+    }
+}
+
 function renderTable() {
     const tbody = document.getElementById('tabla-body');
     tbody.innerHTML = '';
@@ -69,7 +112,7 @@ function renderTable() {
     });
 }
 
-document.getElementById('guardar').addEventListener('click', crear);
+document.getElementById('guardar').addEventListener('click', guardar);
 
-loadData();
+// loadData();
 renderTable();
